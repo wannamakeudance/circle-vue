@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from 'vue';
 import axios from "axios";
 import { useCounterStore } from '../stores/counter';
 import { API_HOST } from '../const';
