@@ -1,4 +1,5 @@
 <script setup>
+import { reactive } from "vue";
 import axios from "axios";
 import { useCounterStore } from '../stores/counter';
 import { API_HOST } from '../const';
@@ -14,9 +15,8 @@ const props = defineProps({
   },
   showActions: Boolean
 });
-
+const book = reactive(props.book);
 const bookId = props.book.id;
-
 const clickToDetail = () => {
   location.href = `/book/${bookId}`
 };
@@ -33,7 +33,7 @@ async function purchaseBook() {
       alert('Purchase failed');
       return;
     }
-
+    book.availableStock--;
     const store = useCounterStore();
     store.increment();
 
