@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/book/:id"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/api/books"
   to = "http://3.106.230.22:4000/books"
   status = 200
