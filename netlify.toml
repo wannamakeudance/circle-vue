@@ -5,6 +5,12 @@
   force = true
 
 [[redirects]]
+  from = "/api/books/:id/purchase"
+  to = "http://3.106.230.22:4000/books/:id/purchase"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/api/books/:id"
   to = "http://3.106.230.22:4000/books/:id"
   status = 200
