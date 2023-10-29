@@ -21,14 +21,9 @@ const clickToDetail = () => {
   location.href = `/book/${bookId}`
 };
 
-const clickToPurchase = async () => {
-  await purchaseBook();
-};
-
 async function purchaseBook() {
   try {
     const response = await axios.post(`${API_HOST}books/${bookId}/purchase`);
-
     if (!response.data) {
       console.log('No books data')
       return;
@@ -43,7 +38,7 @@ async function purchaseBook() {
     store.increment();
 
   } catch (error) {
-    alert(`Server error in fetchBooks: ${error}`);
+    alert(`Server error in purchaseBook: ${error.response.data.message}`);
   }
 }
 
@@ -72,7 +67,7 @@ async function purchaseBook() {
       <v-btn color="orange" @click="clickToDetail">
         DETAIL
       </v-btn>
-      <v-btn color="orange" @click="clickToPurchase">
+      <v-btn color="orange" @click="purchaseBook()">
         PURCHASE
       </v-btn>
     </v-card-actions>
