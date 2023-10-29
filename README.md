@@ -6,7 +6,7 @@ This project was built in Vue3 with Node.js v18.
 
   Notice: since what I use is free version, the API speed is kind of slow.
 
-- Front end locates Netlify
+- Front end was deployed into Netlify https://main--dreamy-creponne-453536.netlify.app/
 
 ## Project Setup
 
