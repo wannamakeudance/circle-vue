@@ -1,3 +1,5 @@
 [[redirects]]
-  from = "/api"
+  from = "/api/*"
   to = "http://3.106.230.22:4000"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
