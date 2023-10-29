@@ -1,14 +1,12 @@
-# vue-project
+# books-vue-project
 
-This template should help get you started developing with Vue 3 in Vite.
+This project was built in Vue3 with Node.js v18.
 
-## Recommended IDE Setup
+- Back end APIs locate `http://3.106.230.22:4000/books` in AWS EC2.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+  Notice: since what I use is free version, the API speed is kind of slow.
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- Front end locates Netlify
 
 ## Project Setup
 
@@ -26,32 +24,4 @@ npm run dev
 
 ```sh
 npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
