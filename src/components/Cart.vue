@@ -1,5 +1,6 @@
 <script setup>
 import { useCounterStore } from '../stores/counter';
+import CartHeartIcon from '../components/icons/CartHeartIcon.vue';
 const store = useCounterStore();
 
 </script>
@@ -8,7 +9,7 @@ const store = useCounterStore();
         <div v-if="store.count" class="red-circle">
             {{ store.count }}
         </div>
-        <img src="@/assets/cart-heart.svg" alt="cart" width="100">
+        <CartHeartIcon />
     </div>
 </template>
 <style scoped>
@@ -22,6 +23,8 @@ const store = useCounterStore();
     text-align: center;
     border-radius: 50%;
     position: absolute;
+    bottom: 3rem;
+    z-index: 1;
 }
 
 .cart-container {

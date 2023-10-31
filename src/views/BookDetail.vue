@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router';
 import axios from 'axios';
 import { API_GET_BOOKS } from '../const';
 import Book from '../components/Book.vue';
+import HomeIcon from '../components/icons/HomeIcon.vue';
 
 onMounted(() => {
   fetchOneBook();
@@ -43,14 +44,31 @@ async function fetchOneBook() {
 
 </script>
 <template>
-  <Book v-if="loaded" class="book-detail" :book="book">
-  </Book>
-  <v-progress-circular v-else="loaded" :size="70" color="red" indeterminate></v-progress-circular>
+  <div v-if="loaded">
+    <router-link class="back-home text-orange" to="/">
+      <HomeIcon class="home-icon" /> Back
+    </router-link>
+    <Book class="book-detail" :book="book" />
+  </div>
+  <v-progress-circular v-else="loaded" :size="70" color="red" indeterminate />
 </template>
 
 <style scoped>
 .book-detail {
   width: 80vw;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.back-home {
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  margin: 1rem 0 1rem 0;
+  padding: .2rem 0 .2rem;
+}
+
+.home-icon {
+  margin-right: 1rem;
 }
 </style>

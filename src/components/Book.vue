@@ -1,6 +1,7 @@
 <script setup>
 import { reactive } from "vue";
 import axios from "axios";
+import AccountIcon from '../components/icons/AccountIcon.vue'
 import { useCounterStore } from '../stores/counter';
 import { API_HOST } from '../const';
 
@@ -52,7 +53,7 @@ async function purchaseBook() {
     </v-img>
 
     <v-card-subtitle class="book-author">
-      <img class="author-icon" src="@/assets/account.svg" alt="author" width="20">
+      <AccountIcon class="author-icon" />
       {{ book.author }}
     </v-card-subtitle>
 
@@ -79,6 +80,7 @@ async function purchaseBook() {
 .book-container .book-author {
   display: flex;
   line-height: 3rem;
+  align-items: center;
   width: 320px;
 }
 
